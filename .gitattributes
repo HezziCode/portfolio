@@ -1,5 +1,9 @@
 # Tell GitHub Linguist how to detect repository languages accurately
 public/** linguist-vendored
+scripts/** linguist-vendored
+*.js linguist-vendored
+*.mjs linguist-vendored
+*.cjs linguist-vendored
 *.html linguist-detectable=false
 *.json linguist-detectable=false
 *.md linguist-documentation
