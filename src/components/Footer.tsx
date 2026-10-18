@@ -71,7 +71,7 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="w-full bg-white pb-2.5 sm:pb-3.5 lg:pb-4 pt-1 select-none">
+    <footer className="w-full bg-white pb-2.5 sm:pb-3.5 lg:pb-4 pt-1 select-none overflow-hidden">
       <div className="w-full px-1.5 sm:px-2.5 lg:px-3.5">
         
         {/* ══════════════════════════════════════════════════════════════════

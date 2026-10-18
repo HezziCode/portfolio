@@ -181,10 +181,10 @@ export default function RootLayout({
       </head>
       <body
         suppressHydrationWarning
-        className="min-h-full flex flex-col bg-white text-slate-dark font-sans"
+        className="min-h-full flex flex-col bg-white text-slate-dark font-sans overflow-x-clip w-full relative"
       >
         <Navbar />
-        <div className="flex-1">{children}</div>
+        <div className="flex-1 w-full overflow-x-clip">{children}</div>
         <ExitIntentModal />
       </body>
     </html>

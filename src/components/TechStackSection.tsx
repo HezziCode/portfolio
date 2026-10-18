@@ -340,7 +340,7 @@ export default function TechStackSection() {
         </motion.div>
 
         {/* Category Navigation Pills */}
-        <div className="flex flex-wrap items-center gap-2 mb-8 p-1.5 rounded-2xl bg-slate-100/90 border border-slate-200/80 w-fit shadow-2xs">
+        <div className="flex flex-wrap items-center gap-2 mb-8 p-1.5 rounded-2xl bg-slate-100/90 border border-slate-200/80 w-fit max-w-full shadow-2xs">
           {categories.map((cat) => {
             const isActive = activeTab === cat.id;
             const Icon = cat.icon;

@@ -18,7 +18,7 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative w-full bg-white lg:min-h-[auto] lg:py-6">
+    <section className="relative w-full bg-white lg:min-h-[auto] lg:py-6 overflow-hidden">
       {/* ─── 1. Subtle diagonal / skewed background treatment ─── */}
       <div className="pointer-events-none select-none absolute inset-0 overflow-hidden z-0">
         <div className="absolute -inset-[25%] -rotate-[8deg] opacity-[0.06] flex flex-col justify-around">
@@ -29,7 +29,7 @@ export default function Hero() {
         </div>
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 lg:px-20 pt-10 pb-10 md:pt-16 md:pb-12 lg:py-0 xl:pt-12 2xl:pt-16 overflow-visible">
+      <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 lg:px-20 pt-10 pb-10 md:pt-16 md:pb-12 lg:py-0 xl:pt-12 2xl:pt-16">
         <div className="flex flex-col lg:flex-row items-center lg:items-start gap-14 lg:gap-8 relative">
           
           {/* ─── Left Content ─── */}
@@ -306,14 +306,14 @@ export default function Hero() {
 
           {/* ─── 2. Photo Frame & Chunky Blobs (Right Side) ─── */}
           <div className="flex-1 flex justify-center lg:justify-end relative mt-6 lg:mt-0 w-full">
-            <div className="relative w-[290px] h-[370px] sm:w-[330px] sm:h-[420px] md:w-[370px] md:h-[460px] lg:w-[390px] lg:h-[480px]">
+            <div className="relative w-[280px] xs:w-[290px] h-[360px] xs:h-[370px] sm:w-[330px] sm:h-[420px] md:w-[370px] md:h-[460px] lg:w-[390px] lg:h-[480px]">
 
               {/* Chunky Primary Blue Blobs / Brush Strokes with breathing animations */}
               {/* Blob 1: Peeking out from bottom-left corner */}
               <motion.div
                 animate={{ scale: [1, 1.04, 1] }}
                 transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute -bottom-6 -left-14 sm:-left-16 w-48 sm:w-56 h-20 sm:h-24 bg-primary rounded-full -rotate-[14deg] z-0"
+                className="absolute -bottom-6 -left-8 sm:-left-16 w-44 sm:w-56 h-18 sm:h-24 bg-primary rounded-full -rotate-[14deg] z-0"
                 style={{ backgroundColor: "var(--primary)" }}
               />
 
@@ -321,7 +321,7 @@ export default function Hero() {
               <motion.div
                 animate={{ scale: [1, 1.03, 1] }}
                 transition={{ duration: 6, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-                className="absolute -bottom-10 -right-16 sm:-right-20 w-64 sm:w-72 h-24 sm:h-28 bg-primary rounded-full -rotate-[32deg] z-0"
+                className="absolute -bottom-8 sm:-bottom-10 -right-8 sm:-right-20 w-52 sm:w-72 h-20 sm:h-28 bg-primary rounded-full -rotate-[32deg] z-0"
                 style={{ backgroundColor: "var(--primary)" }}
               />
 
@@ -329,7 +329,7 @@ export default function Hero() {
               <motion.div
                 animate={{ scale: [1, 1.05, 1] }}
                 transition={{ duration: 5.5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
-                className="absolute top-12 -right-8 sm:-right-10 w-28 sm:w-32 h-16 sm:h-20 bg-primary rounded-full -rotate-[22deg] z-0"
+                className="absolute top-12 -right-4 sm:-right-10 w-24 sm:w-32 h-14 sm:h-20 bg-primary rounded-full -rotate-[22deg] z-0"
                 style={{ backgroundColor: "var(--primary)" }}
               />
 
@@ -337,7 +337,7 @@ export default function Hero() {
               <motion.svg
                 animate={{ y: [0, -6, 0] }}
                 transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute top-[8%] -left-8 w-16 h-16 text-slate-dark z-20"
+                className="absolute top-[8%] -left-5 sm:-left-8 w-14 sm:w-16 h-14 sm:h-16 text-slate-dark z-20"
                 viewBox="0 0 64 40"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"

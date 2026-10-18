@@ -11,14 +11,14 @@ const Footer = dynamic(() => import("@/components/Footer"));
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-white">
+    <main className="min-h-screen bg-white w-full overflow-x-clip">
       <Hero />
       <AboutStats />
       <ServicesSection />
       <WorkProcess />
       <TechStackSection />
       <Testimonials />
-      <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
+      <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12 overflow-hidden">
         <FAQ />
       </div>
       <Footer />

@@ -32,7 +32,7 @@ export default function FAQ() {
   };
 
   return (
-    <section className="relative w-full py-8 sm:py-12 mb-24">
+    <section className="relative w-full py-8 sm:py-12 mb-24 overflow-hidden">
       {/* ─── Top Left Sketch Doodle: Speech Bubbles ─── */}
       <div className="absolute top-6 left-6 sm:top-10 sm:left-10 select-none pointer-events-none hidden md:block opacity-60">
         <svg
