@@ -60,23 +60,20 @@ export default function IntroVideoModal({ isOpen, onClose }: IntroVideoModalProp
             className="absolute inset-0 bg-black/85 backdrop-blur-md cursor-pointer"
           />
 
-          {/* Modal Container */}
+          {/* Modal Container — tailored to vertical portrait format */}
           <motion.div
             initial={{ opacity: 0, scale: 0.95, y: 16 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.95, y: 16 }}
             transition={{ type: "spring", stiffness: 350, damping: 28 }}
-            className="relative z-10 w-full max-w-4xl bg-slate-950 border border-white/15 rounded-2xl sm:rounded-3xl shadow-2xl overflow-hidden flex flex-col"
+            className="relative z-10 w-full max-w-md bg-slate-950 border border-white/15 rounded-2xl sm:rounded-3xl shadow-2xl overflow-hidden flex flex-col max-h-[92vh]"
           >
             {/* Header bar */}
-            <div className="flex items-center justify-between px-4 sm:px-6 py-3.5 border-b border-white/10 bg-slate-900/60 backdrop-blur-sm">
-              <div className="flex items-center gap-2.5">
-                <span className="w-2.5 h-2.5 rounded-full bg-primary animate-pulse" />
-                <span className="text-xs sm:text-sm font-mono font-bold tracking-wider text-white uppercase">
+            <div className="flex items-center justify-between px-4 sm:px-5 py-3 border-b border-white/10 bg-slate-900/60 backdrop-blur-sm">
+              <div className="flex items-center gap-2">
+                <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
+                <span className="text-[11px] sm:text-xs font-mono font-bold tracking-wider text-white uppercase truncate">
                   {videoData.tag || "HUZAIFA'S STORY • 1-MIN INTRO"}
-                </span>
-                <span className="hidden sm:inline-block text-xs font-mono text-slate-400">
-                  | {videoData.location || "Karachi, Pakistan"}
                 </span>
               </div>
 
@@ -84,16 +81,16 @@ export default function IntroVideoModal({ isOpen, onClose }: IntroVideoModalProp
               <button
                 type="button"
                 onClick={onClose}
-                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/10 hover:bg-white/20 text-white text-xs font-mono font-semibold transition-colors cursor-pointer select-none"
+                className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-white/10 hover:bg-white/20 text-white text-[11px] font-mono font-semibold transition-colors cursor-pointer select-none shrink-0"
                 aria-label="Close modal"
               >
                 <span>Close</span>
-                <X className="w-3.5 h-3.5" />
+                <X className="w-3 h-3" />
               </button>
             </div>
 
-            {/* Video Player */}
-            <div className="relative w-full aspect-[16/9] bg-black flex items-center justify-center overflow-hidden">
+            {/* Video Player — Portrait 9:16 aspect ratio perfectly framing vertical video */}
+            <div className="relative w-full aspect-[9/16] max-h-[72vh] bg-black flex items-center justify-center overflow-hidden">
               <video
                 ref={videoRef}
                 src={videoSrc}
@@ -101,23 +98,20 @@ export default function IntroVideoModal({ isOpen, onClose }: IntroVideoModalProp
                 autoPlay
                 playsInline
                 preload="auto"
-                className="w-full h-full object-contain bg-black"
+                className="w-full h-full object-cover bg-black"
               >
                 Your browser does not support the video tag.
               </video>
             </div>
 
             {/* Footer bar with caption */}
-            <div className="px-4 sm:px-6 py-3 bg-slate-900/80 border-t border-white/10 flex items-center justify-between text-xs text-slate-400 font-mono">
-              <div className="flex items-center gap-2">
-                <Play className="w-3.5 h-3.5 text-primary fill-primary" />
-                <span className="text-slate-200 font-sans font-medium text-xs sm:text-sm truncate">
+            <div className="px-4 py-2.5 bg-slate-900/80 border-t border-white/10 flex items-center justify-between text-xs text-slate-400 font-mono">
+              <div className="flex items-center gap-2 min-w-0">
+                <Play className="w-3 h-3 text-primary fill-primary shrink-0" />
+                <span className="text-slate-200 font-sans font-medium text-xs truncate">
                   {videoData.subtitle || "The journey, philosophy & the human behind the code"}
                 </span>
               </div>
-              <span className="hidden md:inline text-slate-500 text-[11px]">
-                Press ESC to exit
-              </span>
             </div>
           </motion.div>
         </div>
