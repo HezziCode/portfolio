@@ -550,22 +550,22 @@ export const websiteContent = {
         "A timeline of the companies I've worked with, the products I've built, and my day-to-day work in software and AI.",
       jobs: [
         {
-          title: "Lead Full Stack & AI Architect",
+          title: "Full Stack Developer",
           company: "Higlax Solutions",
-          location: "Onsite",
-          period: "2026 — Present",
-          periodHover: "May 2026 — Present",
+          location: "Onsite • Karachi",
+          period: "May 2026 — Sep 2026",
+          periodHover: "5th May 2026 — 30th Sep 2026",
+          certificateUrl: "/documents/huzaifa-experience-certificate-higlax.pdf",
           description:
-            "Developing internal enterprise platforms and workflow solutions for UK-based clients using Next.js and FastAPI. Integrating conversational voice AI with Vapi, autonomous multi-agent systems via OpenAI Agent SDK, and end-to-end task automation with Zapier and Docker.",
+            "Contributed to full-stack web applications and internal tools for client and enterprise projects. Engineered frontend and backend functionality with modern web technologies, developed and integrated databases and REST APIs, and delivered software solutions with strong system design and problem-solving.",
           technologies: [
             "Next.js",
             "FastAPI",
-            "OpenAI Agent SDK",
-            "Vapi",
-            "Zapier",
-            "Docker",
             "TypeScript",
             "Python",
+            "PostgreSQL",
+            "Docker",
+            "OpenAI Agent SDK",
           ],
         },
         {

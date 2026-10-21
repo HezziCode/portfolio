@@ -139,22 +139,37 @@ export default function WorkExperience() {
                   </p>
                 )}
 
-                {/* Technologies Deployed Pills */}
-                {"technologies" in job && Array.isArray(job.technologies) && job.technologies.length > 0 && (
-                  <div className="flex flex-wrap items-center gap-1.5 pt-3 border-t border-slate-100">
-                    <span className="text-[10px] font-mono font-bold text-slate-400 uppercase tracking-wider mr-1 select-none">
-                      {"skillsLabel" in job && job.skillsLabel ? (job.skillsLabel as string) : "Stack:"}
-                    </span>
-                    {job.technologies.map((tech: string) => (
-                      <span
-                        key={tech}
-                        className="px-2 py-0.5 rounded-md bg-slate-50 border border-slate-200/80 text-[11px] font-mono text-slate-700"
-                      >
-                        {tech}
+                {/* Technologies Deployed Pills & Certificate Link */}
+                <div className="flex flex-wrap items-center justify-between gap-3 pt-3 border-t border-slate-100">
+                  {"technologies" in job && Array.isArray(job.technologies) && job.technologies.length > 0 && (
+                    <div className="flex flex-wrap items-center gap-1.5">
+                      <span className="text-[10px] font-mono font-bold text-slate-400 uppercase tracking-wider mr-1 select-none">
+                        {"skillsLabel" in job && job.skillsLabel ? (job.skillsLabel as string) : "Stack:"}
                       </span>
-                    ))}
-                  </div>
-                )}
+                      {job.technologies.map((tech: string) => (
+                        <span
+                          key={tech}
+                          className="px-2 py-0.5 rounded-md bg-slate-50 border border-slate-200/80 text-[11px] font-mono text-slate-700"
+                        >
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
+                  )}
+
+                  {"certificateUrl" in job && Boolean(job.certificateUrl) && (
+                    <a
+                      href={job.certificateUrl as string}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 hover:bg-emerald-100 border border-emerald-200 text-xs font-mono font-semibold text-emerald-800 transition-colors shadow-2xs group/cert select-none"
+                    >
+                      <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
+                      <span>Experience Certificate</span>
+                      <ArrowUpRight className="w-3.5 h-3.5 text-emerald-600 transition-transform group-hover/cert:translate-x-0.5 group-hover/cert:-translate-y-0.5" />
+                    </a>
+                  )}
+                </div>
               </div>
             );
           })}
