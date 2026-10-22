@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 import { websiteContent } from "@/content/websiteContent";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://huzaifasys.com";
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://www.huzaifasys.com";
   const currentDate = new Date();
 
   const staticRoutes: MetadataRoute.Sitemap = [

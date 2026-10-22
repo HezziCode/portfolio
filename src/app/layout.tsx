@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
   display: "swap",
 });
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://huzaifasys.com";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://www.huzaifasys.com";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -96,6 +96,9 @@ export const metadata: Metadata = {
       { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
     ],
   },
+  verification: {
+    google: "dmRiU38GtEdEQdSniRpqPgpisCXRyiG1kcvCHIT1gqU",
+  },
   category: "technology",
 };
 
@@ -106,6 +109,12 @@ const jsonLd = {
       "@type": "Person",
       "@id": `${siteUrl}/#person`,
       name: "Huzaifa Sys",
+      alternateName: [
+        "Muhammad Huzaifa",
+        "huzaifasys",
+        "huzaifa sys",
+        "HezziCode",
+      ],
       jobTitle: "Full Stack AI Engineer",
       description:
         "Full Stack AI Engineer specializing in autonomous AI agent systems, modern Next.js web applications, and resilient cloud infrastructure.",
@@ -142,7 +151,13 @@ const jsonLd = {
       "@type": "WebSite",
       "@id": `${siteUrl}/#website`,
       url: siteUrl,
-      name: "Huzaifa Sys Portfolio",
+      name: "Huzaifa Sys",
+      alternateName: [
+        "huzaifasys",
+        "huzaifa sys",
+        "Huzaifa Sys Portfolio",
+        "Huzaifa Sys — Full Stack AI Engineer",
+      ],
       description:
         "Official engineering portfolio and technical case studies of Huzaifa Sys.",
       publisher: {
@@ -158,6 +173,45 @@ const jsonLd = {
       mainEntity: {
         "@id": `${siteUrl}/#person`,
       },
+    },
+    {
+      "@type": "ItemList",
+      "@id": `${siteUrl}/#sitenavigation`,
+      name: "Site Navigation",
+      itemListElement: [
+        {
+          "@type": "SiteNavigationElement",
+          position: 1,
+          name: "About",
+          description:
+            "Biography, engineering background, and hands-on experience of Huzaifa Sys.",
+          url: `${siteUrl}/about`,
+        },
+        {
+          "@type": "SiteNavigationElement",
+          position: 2,
+          name: "Projects",
+          description:
+            "Case studies of production AI systems, full-stack web platforms, and agent workflows.",
+          url: `${siteUrl}/projects`,
+        },
+        {
+          "@type": "SiteNavigationElement",
+          position: 3,
+          name: "Contact",
+          description:
+            "Direct contact options and consultation booking for software development.",
+          url: `${siteUrl}/contact`,
+        },
+        {
+          "@type": "SiteNavigationElement",
+          position: 4,
+          name: "Schedule a Call",
+          description:
+            "Schedule a direct 30-minute system architecture discovery call.",
+          url: `${siteUrl}/schedule`,
+        },
+      ],
     },
   ],
 };
