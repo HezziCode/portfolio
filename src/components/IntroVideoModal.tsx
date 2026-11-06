@@ -60,13 +60,13 @@ export default function IntroVideoModal({ isOpen, onClose }: IntroVideoModalProp
             className="absolute inset-0 bg-black/85 backdrop-blur-md cursor-pointer"
           />
 
-          {/* Modal Container — tailored to vertical portrait format */}
+          {/* Modal Container — widescreen cinematic format */}
           <motion.div
             initial={{ opacity: 0, scale: 0.95, y: 16 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.95, y: 16 }}
             transition={{ type: "spring", stiffness: 350, damping: 28 }}
-            className="relative z-10 w-full max-w-md bg-slate-950 border border-white/15 rounded-2xl sm:rounded-3xl shadow-2xl overflow-hidden flex flex-col max-h-[92vh]"
+            className="relative z-10 w-full max-w-3xl sm:max-w-4xl bg-slate-950 border border-white/15 rounded-2xl sm:rounded-3xl shadow-2xl overflow-hidden flex flex-col max-h-[92vh]"
           >
             {/* Header bar */}
             <div className="flex items-center justify-between px-4 sm:px-5 py-3 border-b border-white/10 bg-slate-900/60 backdrop-blur-sm">
@@ -89,8 +89,8 @@ export default function IntroVideoModal({ isOpen, onClose }: IntroVideoModalProp
               </button>
             </div>
 
-            {/* Video Player — Portrait 9:16 aspect ratio perfectly framing vertical video */}
-            <div className="relative w-full aspect-[9/16] max-h-[72vh] bg-black flex items-center justify-center overflow-hidden">
+            {/* Video Player — Widescreen 16:9 aspect ratio */}
+            <div className="relative w-full aspect-video bg-black flex items-center justify-center overflow-hidden">
               <video
                 ref={videoRef}
                 src={videoSrc}
@@ -98,7 +98,7 @@ export default function IntroVideoModal({ isOpen, onClose }: IntroVideoModalProp
                 autoPlay
                 playsInline
                 preload="auto"
-                className="w-full h-full object-cover bg-black"
+                className="w-full h-full object-contain bg-black"
               >
                 Your browser does not support the video tag.
               </video>
