@@ -32,7 +32,7 @@ export async function POST(req: Request) {
     }
 
     const { name, email, company, exploration, message } = parseResult.data;
-    const toEmail = process.env.CONTACT_TO_EMAIL || "huzaifasys@gmail.com";
+    const toEmail = process.env.CONTACT_TO_EMAIL || "huzaifa@huzaifasys.com";
 
     const resend = new Resend(apiKey);
 
@@ -97,8 +97,10 @@ export async function POST(req: Request) {
       </html>
     `;
 
+    const fromEmail = process.env.CONTACT_FROM_EMAIL || "Huzaifa Sys Portfolio <contact@huzaifasys.com>";
+
     const { data, error } = await resend.emails.send({
-      from: "Huzaifa Sys Portfolio <onboarding@resend.dev>",
+      from: fromEmail,
       to: [toEmail],
       replyTo: email,
       subject: emailSubject,

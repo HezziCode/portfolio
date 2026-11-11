@@ -87,7 +87,7 @@ Open [http://localhost:3000](http://localhost:3000) to view the application.
 - **Website:** [huzaifasys.com](https://huzaifasys.com)
 - **GitHub:** [@HezziCode](https://github.com/HezziCode)
 - **LinkedIn:** [/in/huzaifasys](https://linkedin.com/in/huzaifasys)
-- **Email:** [huzaifasys@gmail.com](mailto:huzaifasys@gmail.com)
+- **Email:** [huzaifa@huzaifasys.com](mailto:huzaifa@huzaifasys.com)
 - **WhatsApp:** +92 346 2037714
 
 ---

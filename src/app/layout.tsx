@@ -121,7 +121,7 @@ const jsonLd = {
         "Full Stack AI Engineer specializing in autonomous AI agent systems, modern Next.js web applications, and resilient cloud infrastructure.",
       url: siteUrl,
       image: `${siteUrl}/about-real.jpg`,
-      email: "mailto:huzaifasys@gmail.com",
+      email: "mailto:huzaifa@huzaifasys.com",
       telephone: "+923462037714",
       address: {
         "@type": "PostalAddress",
