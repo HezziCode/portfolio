@@ -16,6 +16,7 @@ import {
   Calendar,
   Globe,
   ChevronDown,
+  Phone,
 } from "lucide-react";
 import { websiteContent } from "@/content/websiteContent";
 import Footer from "@/components/Footer";
@@ -198,7 +199,27 @@ export default function ContactPage() {
                   </button>
                 </div>
 
-                {/* Row 2: Discovery Call */}
+                {/* Row 2: Phone Number */}
+                <div className="py-3.5 flex items-center justify-between gap-4">
+                  <div className="flex items-center gap-3">
+                    <div className="w-8 h-8 rounded-lg bg-blue-50 text-primary flex items-center justify-center shrink-0">
+                      <Phone className="w-4 h-4" />
+                    </div>
+                    <div>
+                      <span className="text-[10px] font-mono uppercase tracking-wider text-slate-400 block leading-tight">
+                        DIRECT LINE
+                      </span>
+                      <a
+                        href={`tel:${contactPage.phone.replace(/\s+/g, "")}`}
+                        className="text-sm sm:text-base font-bold text-slate-900 hover:text-primary transition-colors"
+                      >
+                        {contactPage.phone}
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Row 3: Discovery Call */}
                 <div className="py-3.5 flex items-center justify-between gap-4">
                   <div className="flex items-center gap-3">
                     <div className="w-8 h-8 rounded-lg bg-blue-50 text-primary flex items-center justify-center shrink-0">
@@ -222,7 +243,7 @@ export default function ContactPage() {
                   </a>
                 </div>
 
-                {/* Row 3: Timezone & Location */}
+                {/* Row 4: Timezone & Location */}
                 <div className="py-3.5 flex items-center justify-between gap-4">
                   <div className="flex items-center gap-3">
                     <div className="w-8 h-8 rounded-lg bg-blue-50 text-primary flex items-center justify-center shrink-0">
@@ -242,7 +263,7 @@ export default function ContactPage() {
                   </div>
                 </div>
 
-                {/* Row 4: Response Guarantee */}
+                {/* Row 5: Response Guarantee */}
                 <div className="py-3.5 flex items-center justify-between gap-4">
                   <div className="flex items-center gap-3">
                     <div className="w-8 h-8 rounded-lg bg-blue-50 text-primary flex items-center justify-center shrink-0">
@@ -262,7 +283,7 @@ export default function ContactPage() {
                   </span>
                 </div>
 
-                {/* Row 5: Live Availability Status */}
+                {/* Row 6: Live Availability Status */}
                 <div className="py-3.5 flex items-center justify-between gap-4">
                   <div className="flex items-center gap-3">
                     <div className="w-8 h-8 rounded-lg bg-blue-50 text-primary flex items-center justify-center shrink-0">
